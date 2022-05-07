@@ -25,3 +25,6 @@ Create two more tests to validate the input values passed to the filter function
 2. The `name` argument is `null`, `undefined` or not a `string`.
 
 > Note: Both scenarios could make the tests fail as it is the code now, but what would be the fix to make them pass?
+
+## URL
+ https://pwxcwf.csb.app/
