@@ -4,7 +4,8 @@ import { mockPokemonsData } from "../mock/pokeData";
 describe("Filter Pokemon", () => {
   test("it should return an array", () => {
     const pokemon = filterPokemon(mockPokemonsData, "");
-    expect(pokemon).toBe([]);
+    console.log('entro pokemon', pokemon);
+    expect(pokemon).toStrictEqual([]);
   });
 
   test("it should return an empty array", () => {
@@ -15,17 +16,17 @@ describe("Filter Pokemon", () => {
   test("it should return an array with charizard object", () => {
     const pokemon = filterPokemon(mockPokemonsData, "charizard");
     const [charizard] = mockPokemonsData;
-    expect(pokemon).toBe(charizard);
+    expect(pokemon).toStrictEqual([charizard]);
   });
 
   /* BUNUS */
   test("it should validate the 'pokeList' argument", () => {
-    /* Your solution comes here */
-    expect(false).toBe(true);
+    const pokemon = filterPokemon("pokeList", "charizard");
+    expect(pokemon).toBe(false);
   });
 
   test("it should validate the 'name' argument", () => {
-    /* Your solution comes here */
-    expect(false).toBe(true);
+    const pokemon = filterPokemon("pokeList", "");
+    expect(pokemon).toStrictEqual([]);
   });
 });
