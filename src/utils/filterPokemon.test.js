@@ -4,7 +4,6 @@ import { mockPokemonsData } from "../mock/pokeData";
 describe("Filter Pokemon", () => {
   test("it should return an array", () => {
     const pokemon = filterPokemon(mockPokemonsData, "");
-    console.log('entro pokemon', pokemon);
     expect(pokemon).toStrictEqual([]);
   });
 
